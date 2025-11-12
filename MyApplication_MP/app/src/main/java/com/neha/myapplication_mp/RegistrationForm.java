@@ -1,11 +1,13 @@
 package com.neha.myapplication_mp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -15,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.ArrayList;
 
 public class RegistrationForm extends AppCompatActivity {
 
@@ -53,7 +57,36 @@ public class RegistrationForm extends AppCompatActivity {
                 String fullNameValue = etFullName.getText().toString();
                 double mobileNumberValue = Double.parseDouble(etMobileNumber.getText().toString());
 
+                int selectedRgId = rgGender.getCheckedRadioButtonId();
+                String gender = " ";
+
+                if(selectedRgId !=-1){
+                    RadioButton selectedGender = findViewById(selectedRgId);
+                    gender = selectedGender.getText().toString();
+                }
+
+                String country = spCountry.getSelectedItem().toString();
+
+                ArrayList<String> hobbiesList = new ArrayList<>();
+                if(cbReading.isChecked()){
+                    hobbiesList.add("Reading");
+                }
+                if(cbPlaying.isChecked()){
+                    hobbiesList.add("Playing");
+                }
+                if(cbTravelling.isChecked()){
+                    hobbiesList.add("Travelling");
+                }
+
+                Intent intent = new Intent(RegistrationForm.this, UserDetailsActivity.class);
+                intent.putExtra("full_name",fullNameValue);
+                intent.putExtra("mobile_number",mobileNumberValue);
+                intent.putExtra("gender",gender);
+                startActivity(intent);
+
                 Toast.makeText(RegistrationForm.this, fullNameValue + " / " + mobileNumberValue, Toast.LENGTH_LONG).show();
+
+
             }
         });
 
