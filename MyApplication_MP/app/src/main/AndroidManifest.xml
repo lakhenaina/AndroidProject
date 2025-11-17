@@ -11,24 +11,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_MP">
+
+        <!-- Launcher Activity: Registration Screen -->
         <activity
-            android:name=".UserDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UserLoginUsingLinearLayout"
-            android:exported="false" />
-        <activity
-            android:name=".RegistrationForm"
+            android:name=".Registration_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Feedback Form -->
+        <activity
+            android:name=".FeedBackForm"
+            android:exported="false" />
+
+        <activity
+            android:name=".FeedbackActivity"
+            android:exported="false" />
+
+        <!-- Calculator -->
+        <activity
+            android:name=".Calculator"
+            android:exported="false" />
+
+        <!-- Other activities -->
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".UserLoginUsingLinearLayout"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegistrationForm"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-    </application>
 
+    </application>
 </manifest>
