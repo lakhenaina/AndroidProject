@@ -12,20 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_MP">
         <activity
+            android:name=".ChildActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityLifeCycle"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".Registration_Screen"
-            android:exported="false">
-
-        </activity> <!-- Feedback Form -->
+            android:exported="false" /> <!-- Feedback Form -->
         <activity
             android:name=".FeedBackForm"
             android:exported="false" />
