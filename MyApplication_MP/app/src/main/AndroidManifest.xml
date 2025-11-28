@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_MP">
         <activity
+            android:name=".PopupMenuActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".FragmentParentActivity"
             android:exported="false" />
         <activity
@@ -23,11 +35,7 @@
         <activity
             android:name=".ActivityLifeCycle"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Registration_Screen"
