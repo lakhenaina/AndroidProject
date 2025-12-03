@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_MP">
         <activity
-            android:name=".PopupMenuActivity"
-            android:exported="true" >
+            android:name=".AlertDialogActivity"
+            android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,11 @@
         </intent-filter>
         </activity>
         <activity
-            android:name="MenuActivity"
-            android:exported="false" />
+            android:name=".PopupMenuActivity"
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".FragmentParentActivity"
             android:exported="false" />
@@ -34,7 +37,7 @@
             android:exported="false" />
         <activity
             android:name=".ActivityLifeCycle"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
@@ -58,9 +61,7 @@
         <activity
             android:name=".RegistrationForm"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
     </application>
 
 </manifest>
