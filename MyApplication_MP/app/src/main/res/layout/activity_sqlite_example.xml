@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SqliteExampleActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_sqlite_example_title"
+        android:text="Sqlite Example"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_full_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_sqlite_example_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="text"
+        android:id="@+id/et_sqlite_example_fullname"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_sqlite_example_fullname"
+        android:hint="Age"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/et_sqlite_example_age"
+        android:inputType="number"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:id="@+id/btn_sqlite_example_create"
+        app:layout_constraintTop_toBottomOf="@id/et_sqlite_example_age"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read"
+        android:id="@+id/btn_sqlite_example_read"
+        app:layout_constraintTop_toBottomOf="@id/et_sqlite_example_age"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sqlite_example_create"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/btn_sqlite_example_update"
+        app:layout_constraintTop_toBottomOf="@id/et_sqlite_example_age"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sqlite_example_read"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/btn_sqlite_example_delete"
+        app:layout_constraintTop_toBottomOf="@id/et_sqlite_example_age"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sqlite_example_update"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
